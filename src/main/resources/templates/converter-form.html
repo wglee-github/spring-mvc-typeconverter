@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form th:object="${form}" th:method="post">
+    th:field <input type="text" th:field="*{ipPort}"><br/>
+    th:value <input type="text" value="*{name}">(보여주기 용도)<br/>
+    <input type="submit"/>
+</form>
+
+    <tr th:each="aa : ${map['A']}">
+    	<td th:text="${aa.name}"></td>
+    </tr>
+</body>
+</html>
